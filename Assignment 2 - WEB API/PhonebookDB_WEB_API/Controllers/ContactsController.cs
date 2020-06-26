@@ -80,9 +80,11 @@ namespace PhonebookDB_WEB_API.Controllers
         [HttpPost]
         public async Task<ActionResult<Contact>> PostContact(Contact contact)
         {
-            _context.Contact.Add(contact);
-            await _context.SaveChangesAsync();
-
+            if(!ContactExists(contact.id))
+            {
+                _context.Contact.Add(contact);
+                await _context.SaveChangesAsync();
+            }
             return CreatedAtAction("GetContact", new { id = contact.id }, contact);
         }
 

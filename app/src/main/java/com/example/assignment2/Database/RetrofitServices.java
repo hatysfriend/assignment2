@@ -1,12 +1,8 @@
 package com.example.assignment2.Database;
 
 import android.util.Log;
-
 import com.example.assignment2.Model.Contact;
-
 import java.util.List;
-
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

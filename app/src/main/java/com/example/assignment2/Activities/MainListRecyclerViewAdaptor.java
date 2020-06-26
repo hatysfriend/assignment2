@@ -94,8 +94,6 @@ public class MainListRecyclerViewAdaptor extends RecyclerView.Adapter<MainListRe
         }
     }
 
-
-
     public void reloadContactList(ArrayList<Contact> contactList)
     {
         this.contactList = contactList;
